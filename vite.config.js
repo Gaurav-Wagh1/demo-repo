@@ -13,7 +13,7 @@ export default ({ mode }) => {
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, '')
         },
-        '/users':"https://jsonplaceholder.typicode.com"
+        '/users':"https://jsonplaceholder.typicode.com/users"
       }
     },
     plugins: [react()]
