@@ -9,7 +9,7 @@ function App() {
 
   const fetchdata = async() => {
     try {
-
+      console.log(import.meta.env.VITE_URL)
       const res = await axios.get("/api/users");
       console.log(res)
 
