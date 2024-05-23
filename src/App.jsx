@@ -13,11 +13,14 @@ function App() {
 
       const ans = await axios.get(import.meta.env.VITE_URL + "/users");
       console.log(ans);
-
+      console.log("here 1")
       const response = await axios.get("/users");
+      console.log("here 2")
       console.log(response)
-
+      console.log("here 3")
+      
       const res = await axios.get("/api/users");
+      console.log("here 4")
       console.log(res)
 
     } catch (error) {
