@@ -9,8 +9,10 @@ function App() {
 
   const fetchdata = async() => {
     try {
-      const response = await axios.get("/users");
-      console.log(response);
+
+      const res = await axios.get("/api/users");
+      console.log(res)
+
     } catch (error) {
       console.log(error)
     }
@@ -33,7 +35,6 @@ function App() {
           count is {count}
         </button>
         <h1>env variable is here :- {import.meta.env.VITE_MY_VARIABLE}</h1>
-        {console.log(import.meta.env.VITE_URL)}
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
