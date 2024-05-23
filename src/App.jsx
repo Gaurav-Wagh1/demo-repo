@@ -2,9 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import axios from 'axios'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const fetchdata = async() => {
+    try {
+      const response = await axios.get("/users");
+      console.log(response);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  fetchdata();
 
   return (
     <>
@@ -22,6 +33,7 @@ function App() {
           count is {count}
         </button>
         <h1>env variable is here :- {import.meta.env.VITE_MY_VARIABLE}</h1>
+        {console.log(import.meta.env.VITE_URL)}
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
