@@ -61,6 +61,7 @@ export default ({ mode }) => {
         '/users': "https://jsonplaceholder.typicode.com/users"
       }
     },
-    plugins: [react()]
+    plugins: [react()],
+    base: '/'
   });
 }
