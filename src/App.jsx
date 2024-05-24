@@ -6,6 +6,7 @@ import axios from 'axios'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [data, setdata] = useState({});
 
   const fetchdata = async() => {
     try {
@@ -22,6 +23,8 @@ function App() {
       const res = await axios.get("/api/users");
       console.log("here 4")
       console.log(res)
+
+      setdata(response)
 
     } catch (error) {
       console.log(error)
