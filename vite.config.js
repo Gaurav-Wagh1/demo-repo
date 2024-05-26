@@ -12,6 +12,7 @@ export default defineConfig({
       },
     },
   },
+  plugins:[react()]
   // some other configuration
 })
 
