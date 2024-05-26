@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import axiosInstance from "../axiosinstance";
+import axios from 'axios'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,7 +20,7 @@ function App() {
       // console.log(response)
       console.log("here 3")
       
-      const res = await axiosInstance.get("/api/users");
+      const res = await axios.get("/api/users");
       console.log("here 4")
       console.log(res)
 
