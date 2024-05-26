@@ -2,9 +2,21 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import axios from 'axios'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const fetchdata = async() => {
+    try {
+      const response = await axios.get('/api/users');
+      console.log(response);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  fetchdata();
 
   return (
     <>
