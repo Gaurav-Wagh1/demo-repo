@@ -3,14 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import axios from 'axios'
-import axiosInstance from '../configaxios'
 
 function App() {
   const [count, setCount] = useState(0)
 
   const fetchdata = async() => {
     try {
-      const response = await axiosInstance.get('/api/users');
+      const response = await axios.get('/users');
       console.log(response);
     } catch (error) {
       console.log(error)
